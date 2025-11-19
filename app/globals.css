@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+:root {
+  /* Raw Color Palette */
+  --navy-blue: #0A1628;
+  --deep-slate: #1E293B;
+  --midnight-blue: #0F172A;
+  --professional-blue: #2563EB;
+  --success-green: #10B981;
+  --warning-amber: #F59E0B;
+  --error-red: #EF4444;
+  --pure-white: #FFFFFF;
+  --off-white: #F8FAFC;
+  --light-grey: #E2E8F0;
+  --mid-grey: #64748B;
+  --dark-grey: #334155;
+
+  /* Light Mode Semantic Colors */
+  --background-default: var(--pure-white);
+  --background-subtle: var(--off-white);
+  --background-card: var(--pure-white);
+  --background-inverse: var(--navy-blue);
+  
+  --foreground-default: var(--navy-blue);
+  --foreground-subtle: var(--mid-grey);
+  --foreground-inverse: var(--pure-white);
+
+  --border-default: var(--light-grey);
+
+  --scrollbar-track: var(--off-white);
+  --scrollbar-thumb: var(--light-grey);
+  --scrollbar-thumb-hover: var(--mid-grey);
+}
+
+.dark {
+  /* Dark Mode Semantic Colors */
+  --background-default: var(--midnight-blue);
+  --background-subtle: var(--navy-blue);
+  --background-card: var(--deep-slate);
+  --background-inverse: var(--off-white);
+
+  --foreground-default: var(--pure-white);
+  --foreground-subtle: var(--mid-grey);
+  --foreground-inverse: var(--navy-blue);
+
+  --border-default: var(--dark-grey);
+
+  --scrollbar-track: var(--navy-blue);
+  --scrollbar-thumb: var(--dark-grey);
+  --scrollbar-thumb-hover: var(--mid-grey);
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background-default);
+  color: var(--foreground-default);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Smooth transitions for all interactive elements */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Hover lift effect for cards */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image loading optimization */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Lesson Content Image Styles */
+.lesson-content figure {
+  margin: 2rem 0;
+  clear: both;
+}
+
+.lesson-content figure.float-right {
+  float: right;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 50%;
+}
+
+.lesson-content figure.float-left {
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 50%;
+}
+
+.lesson-content figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lesson-content figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground-subtle);
+}
+
+/* Clearfix for floated images */
+.lesson-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lesson-content figure.float-right,
+  .lesson-content figure.float-left {
+    float: none;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
