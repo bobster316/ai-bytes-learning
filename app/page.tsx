@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Header } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -85,18 +86,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero Visual Placeholder */}
+            {/* Hero Visual */}
             <div className="relative group">
-              <div className="aspect-video rounded-lg border-2 border-border overflow-hidden shadow-lg relative bg-gradient-to-br from-[#00BFA5]/10 via-blue-500/10 to-purple-500/10 dark:from-[#00BFA5]/20 dark:via-blue-500/20 dark:to-purple-500/20">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#00BFA5] to-blue-500 rounded-full flex items-center justify-center shadow-2xl">
-                      <Sparkles className="w-12 h-12 text-white" />
+              <div className="aspect-video rounded-lg border-2 border-border overflow-hidden shadow-lg relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+                  alt="AI-Powered Learning"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end">
+                  <div className="p-8 text-white w-full">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-12 h-12 bg-gradient-to-br from-[#00BFA5] to-blue-500 rounded-lg flex items-center justify-center shadow-lg">
+                        <Sparkles className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold">
+                        AI-Powered Learning
+                      </h3>
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground">
-                      AI-Powered Learning
-                    </h3>
-                    <p className="text-foreground/70 max-w-sm">
+                    <p className="text-white/90 max-w-md">
                       Transform your career with cutting-edge AI education
                     </p>
                   </div>
@@ -135,7 +145,7 @@ export default function Home() {
                 iconColor: "text-blue-600 dark:text-blue-400",
                 courses: 12,
                 category: "foundational-ai-literacy",
-                image: "/categories/Gemini_Generated_Image_70esol70esol70es.png"
+                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop"
               },
               {
                 icon: Sparkles,
@@ -146,7 +156,7 @@ export default function Home() {
                 iconColor: "text-purple-600 dark:text-purple-400",
                 courses: 15,
                 category: "generative-ai-prompt-engineering",
-                image: "/categories/Gemini_Generated_Image_7z1i1m7z1i1m7z1i.png"
+                image: "https://images.unsplash.com/photo-1686191128892-c21baa14ba4e?w=800&h=600&fit=crop"
               },
               {
                 icon: Brain,
@@ -157,7 +167,7 @@ export default function Home() {
                 iconColor: "text-green-600 dark:text-green-400",
                 courses: 18,
                 category: "machine-learning-fundamentals",
-                image: "/categories/Gemini_Generated_Image_9gmuap9gmuap9gmu.png"
+                image: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=800&h=600&fit=crop"
               },
               {
                 icon: Code,
@@ -168,7 +178,7 @@ export default function Home() {
                 iconColor: "text-yellow-600 dark:text-yellow-400",
                 courses: 16,
                 category: "python-programming-ai",
-                image: "/categories/Gemini_Generated_Image_e64qfte64qfte64q.png"
+                image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=600&fit=crop"
               },
               {
                 icon: BarChart3,
@@ -179,7 +189,7 @@ export default function Home() {
                 iconColor: "text-orange-600 dark:text-orange-400",
                 courses: 14,
                 category: "data-science-ai",
-                image: "/categories/Gemini_Generated_Image_g75l16g75l16g75l.png"
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
               },
               {
                 icon: Eye,
@@ -190,7 +200,7 @@ export default function Home() {
                 iconColor: "text-teal-600 dark:text-teal-400",
                 courses: 13,
                 category: "computer-vision-basics",
-                image: "/categories/Gemini_Generated_Image_gch3gfgch3gfgch3.png"
+                image: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&h=600&fit=crop"
               },
               {
                 icon: MessageSquare,
@@ -201,7 +211,7 @@ export default function Home() {
                 iconColor: "text-indigo-600 dark:text-indigo-400",
                 courses: 11,
                 category: "natural-language-processing",
-                image: "/categories/Gemini_Generated_Image_vlh1vovlh1vovlh1.png"
+                image: "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?w=800&h=600&fit=crop"
               },
               {
                 icon: Scale,
@@ -212,7 +222,7 @@ export default function Home() {
                 iconColor: "text-rose-600 dark:text-rose-400",
                 courses: 8,
                 category: "ai-ethics-responsible",
-                image: "/categories/Gemini_Generated_Image_z47mmcz47mmcz47m.png"
+                image: "https://images.unsplash.com/photo-1589254065909-b7086229d08c?w=800&h=600&fit=crop"
               },
               {
                 icon: Briefcase,
@@ -223,7 +233,7 @@ export default function Home() {
                 iconColor: "text-violet-600 dark:text-violet-400",
                 courses: 10,
                 category: "ai-tools-business",
-                image: "/categories/Gemini_Generated_Image_70esol70esol70es.png"
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
               },
             ].map((category, index) => (
               <Link
@@ -232,25 +242,22 @@ export default function Home() {
                 className="group block h-full"
               >
                 <Card className="relative h-full bg-card border-2 border-border shadow-md hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
-                  {/* Image Header - Gradient Placeholder */}
-                  <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${category.color}`}>
-                    {/* Gradient background with pattern */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-white/10"></div>
-                    <div className="absolute inset-0 opacity-20">
-                      <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full blur-2xl"></div>
-                      <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-                    </div>
+                  {/* Image Header */}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={category.image}
+                      alt={category.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
                     {/* Icon badge */}
-                    <div className="absolute top-4 right-4">
-                      <div className={`w-14 h-14 rounded-xl ${category.bgColor} backdrop-blur-sm flex items-center justify-center shadow-lg`}>
+                    <div className="absolute top-4 right-4 z-10">
+                      <div className={`w-14 h-14 rounded-xl ${category.bgColor} backdrop-blur-sm flex items-center justify-center shadow-lg border border-white/20`}>
                         <category.icon className={`w-7 h-7 ${category.iconColor}`} />
                       </div>
-                    </div>
-
-                    {/* Center icon for visual interest */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                      <category.icon className="w-32 h-32 text-white" />
                     </div>
                   </div>
 
@@ -330,7 +337,7 @@ export default function Home() {
                 color: "from-blue-500 to-cyan-500",
                 bgColor: "bg-blue-50",
                 iconColor: "text-blue-600",
-                image: "/ai_mastery/phase_1.png"
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop"
               },
               {
                 phase: "02",
@@ -340,7 +347,7 @@ export default function Home() {
                 color: "from-[#00BFA5] to-emerald-500",
                 bgColor: "bg-emerald-50",
                 iconColor: "text-[#00BFA5]",
-                image: "/ai_mastery/phase_2.png"
+                image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=800&fit=crop"
               },
               {
                 phase: "03",
@@ -350,7 +357,7 @@ export default function Home() {
                 color: "from-purple-500 to-pink-500",
                 bgColor: "bg-purple-50",
                 iconColor: "text-purple-600",
-                image: "/ai_mastery/phase_3.png"
+                image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&h=800&fit=crop"
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
@@ -362,23 +369,21 @@ export default function Home() {
                 )}
 
                 <Card className="relative h-full bg-card border-2 border-border shadow-lg hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
-                  {/* Image Header - Gradient Placeholder */}
-                  <div className={`relative h-56 overflow-hidden bg-gradient-to-br ${item.color}`}>
-                    {/* Gradient background with pattern */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-white/20"></div>
-                    <div className="absolute inset-0 opacity-30">
-                      <div className="absolute top-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-                      <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-3xl"></div>
-                    </div>
-
-                    {/* Center icon for visual interest */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <item.icon className="w-24 h-24 text-white/30" />
-                    </div>
+                  {/* Image Header */}
+                  <div className="relative h-56 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {/* Gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-40`}></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
 
                     {/* Phase number badge */}
-                    <div className="absolute top-4 left-4">
-                      <div className={`inline-block px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md text-white font-bold text-sm shadow-lg border border-white/30`}>
+                    <div className="absolute top-4 left-4 z-10">
+                      <div className="inline-block px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md text-white font-bold text-sm shadow-lg border border-white/30">
                         PHASE {item.phase}
                       </div>
                     </div>
@@ -408,22 +413,18 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Stats Section - Enhanced with Gradient */}
+          {/* Stats Section - Enhanced with Image */}
           <div className="bg-card rounded-3xl shadow-xl border border-border overflow-hidden max-w-5xl mx-auto">
-            {/* Gradient Header */}
-            <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#00BFA5] via-blue-500 to-purple-500">
-              {/* Gradient background with pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-white/20"></div>
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full blur-3xl"></div>
-              </div>
-
-              {/* Center icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Users className="w-32 h-32 text-white/30" />
-              </div>
-
+            {/* Image Header */}
+            <div className="relative h-64 overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&h=600&fit=crop"
+                alt="Trusted by Thousands Worldwide"
+                fill
+                className="object-cover"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00BFA5]/60 via-blue-500/60 to-purple-500/60"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
             </div>
 
