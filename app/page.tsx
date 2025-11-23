@@ -232,25 +232,25 @@ export default function Home() {
                 className="group block h-full"
               >
                 <Card className="relative h-full bg-card border-2 border-border shadow-md hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
-                  {/* Image Header */}
+                  {/* Image Header - Gradient Placeholder */}
                   <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${category.color}`}>
-                    <img
-                      src={category.image}
-                      alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                      }}
-                    />
-                    {/* Gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
+                    {/* Gradient background with pattern */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-white/10"></div>
+                    <div className="absolute inset-0 opacity-20">
+                      <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full blur-2xl"></div>
+                      <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+                    </div>
 
                     {/* Icon badge */}
                     <div className="absolute top-4 right-4">
                       <div className={`w-14 h-14 rounded-xl ${category.bgColor} backdrop-blur-sm flex items-center justify-center shadow-lg`}>
                         <category.icon className={`w-7 h-7 ${category.iconColor}`} />
                       </div>
+                    </div>
+
+                    {/* Center icon for visual interest */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                      <category.icon className="w-32 h-32 text-white" />
                     </div>
                   </div>
 
@@ -362,16 +362,23 @@ export default function Home() {
                 )}
 
                 <Card className="relative h-full bg-card border-2 border-border shadow-lg hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
-                  {/* Image Header */}
-                  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
+                  {/* Image Header - Gradient Placeholder */}
+                  <div className={`relative h-56 overflow-hidden bg-gradient-to-br ${item.color}`}>
+                    {/* Gradient background with pattern */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-white/20"></div>
+                    <div className="absolute inset-0 opacity-30">
+                      <div className="absolute top-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+                      <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-3xl"></div>
+                    </div>
+
+                    {/* Center icon for visual interest */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <item.icon className="w-24 h-24 text-white/30" />
+                    </div>
+
                     {/* Phase number badge */}
                     <div className="absolute top-4 left-4">
-                      <div className={`inline-block px-4 py-2 rounded-lg bg-gradient-to-r ${item.color} text-white font-bold text-sm shadow-lg`}>
+                      <div className={`inline-block px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md text-white font-bold text-sm shadow-lg border border-white/30`}>
                         PHASE {item.phase}
                       </div>
                     </div>
@@ -401,15 +408,22 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Stats Section - Enhanced with Image */}
+          {/* Stats Section - Enhanced with Gradient */}
           <div className="bg-card rounded-3xl shadow-xl border border-border overflow-hidden max-w-5xl mx-auto">
-            {/* Image Header */}
-            <div className="relative h-64 overflow-hidden">
-              <img
-                src="/ai_mastery/trusted.png"
-                alt="Trusted by Thousands Worldwide"
-                className="w-full h-full object-cover"
-              />
+            {/* Gradient Header */}
+            <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#00BFA5] via-blue-500 to-purple-500">
+              {/* Gradient background with pattern */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-white/20"></div>
+              <div className="absolute inset-0 opacity-30">
+                <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+              </div>
+
+              {/* Center icon */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Users className="w-32 h-32 text-white/30" />
+              </div>
+
               <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
             </div>
 
