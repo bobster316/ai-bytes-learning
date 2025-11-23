@@ -305,12 +305,11 @@ export default function Home() {
                 <Card className="relative h-full bg-card border-2 border-border shadow-md hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
                   {/* Image Section */}
                   <div className="relative h-48 overflow-hidden">
-                    <Image
+                    <img
                       src={category.image}
                       alt={category.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
                     />
                     {/* Gradient Overlay */}
                     <div className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
