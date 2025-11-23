@@ -90,7 +90,7 @@ export default function Home() {
             <div className="relative group">
               <div className="aspect-video rounded-lg border-2 border-border overflow-hidden shadow-lg relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+                  src="/mastery/mastery.png"
                   alt="AI-Powered Learning"
                   fill
                   className="object-cover"
@@ -145,7 +145,7 @@ export default function Home() {
                 iconColor: "text-blue-600 dark:text-blue-400",
                 courses: 12,
                 category: "foundational-ai-literacy",
-                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop"
+                image: "/categories/foundation_ai.png"
               },
               {
                 icon: Sparkles,
@@ -156,7 +156,7 @@ export default function Home() {
                 iconColor: "text-purple-600 dark:text-purple-400",
                 courses: 15,
                 category: "generative-ai-prompt-engineering",
-                image: "https://images.unsplash.com/photo-1686191128892-c21baa14ba4e?w=800&h=600&fit=crop"
+                image: "/categories/generative_ai.png"
               },
               {
                 icon: Brain,
@@ -167,7 +167,7 @@ export default function Home() {
                 iconColor: "text-green-600 dark:text-green-400",
                 courses: 18,
                 category: "machine-learning-fundamentals",
-                image: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=800&h=600&fit=crop"
+                image: "/categories/machine learning.png"
               },
               {
                 icon: Code,
@@ -178,7 +178,7 @@ export default function Home() {
                 iconColor: "text-yellow-600 dark:text-yellow-400",
                 courses: 16,
                 category: "python-programming-ai",
-                image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=600&fit=crop"
+                image: "/categories/python_programming.png"
               },
               {
                 icon: BarChart3,
@@ -189,7 +189,7 @@ export default function Home() {
                 iconColor: "text-orange-600 dark:text-orange-400",
                 courses: 14,
                 category: "data-science-ai",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                image: "/categories/data_science.png"
               },
               {
                 icon: Eye,
@@ -200,7 +200,7 @@ export default function Home() {
                 iconColor: "text-teal-600 dark:text-teal-400",
                 courses: 13,
                 category: "computer-vision-basics",
-                image: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&h=600&fit=crop"
+                image: "/categories/computer_vision.png"
               },
               {
                 icon: MessageSquare,
@@ -211,7 +211,7 @@ export default function Home() {
                 iconColor: "text-indigo-600 dark:text-indigo-400",
                 courses: 11,
                 category: "natural-language-processing",
-                image: "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?w=800&h=600&fit=crop"
+                image: "/categories/natural_language_proceessing.png"
               },
               {
                 icon: Scale,
@@ -222,7 +222,7 @@ export default function Home() {
                 iconColor: "text-rose-600 dark:text-rose-400",
                 courses: 8,
                 category: "ai-ethics-responsible",
-                image: "https://images.unsplash.com/photo-1589254065909-b7086229d08c?w=800&h=600&fit=crop"
+                image: "/categories/ai_ethics.png"
               },
               {
                 icon: Briefcase,
@@ -233,7 +233,7 @@ export default function Home() {
                 iconColor: "text-violet-600 dark:text-violet-400",
                 courses: 10,
                 category: "ai-tools-business",
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+                image: "/categories/ai_tools_&_business.png"
               },
             ].map((category, index) => (
               <Link
@@ -337,7 +337,7 @@ export default function Home() {
                 color: "from-blue-500 to-cyan-500",
                 bgColor: "bg-blue-50",
                 iconColor: "text-blue-600",
-                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop"
+                image: "/mastery/Phase 1.png"
               },
               {
                 phase: "02",
@@ -347,7 +347,7 @@ export default function Home() {
                 color: "from-[#00BFA5] to-emerald-500",
                 bgColor: "bg-emerald-50",
                 iconColor: "text-[#00BFA5]",
-                image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=800&fit=crop"
+                image: "/mastery/Phase 2.png"
               },
               {
                 phase: "03",
@@ -357,7 +357,7 @@ export default function Home() {
                 color: "from-purple-500 to-pink-500",
                 bgColor: "bg-purple-50",
                 iconColor: "text-purple-600",
-                image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&h=800&fit=crop"
+                image: "/mastery/Phase 3.png"
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
