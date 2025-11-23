@@ -85,7 +85,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background border-b border-border w-full">
+      <section className="relative overflow-hidden bg-background w-full">
         <div className="container mx-auto px-4 py-12 lg:py-16 max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-6">
