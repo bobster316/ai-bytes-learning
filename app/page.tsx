@@ -206,7 +206,7 @@ export default function Home() {
                 iconColor: "text-blue-600 dark:text-blue-400",
                 courses: 12,
                 category: "foundational-ai-literacy",
-                image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
               },
               {
                 icon: Sparkles,
@@ -217,7 +217,7 @@ export default function Home() {
                 iconColor: "text-purple-600 dark:text-purple-400",
                 courses: 15,
                 category: "generative-ai-prompt-engineering",
-                image: "https://images.unsplash.com/photo-1706885093476-b1e54f26af73?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1686191128892-34460b77fe5a?w=800&q=80"
               },
               {
                 icon: Brain,
@@ -228,7 +228,7 @@ export default function Home() {
                 iconColor: "text-green-600 dark:text-green-400",
                 courses: 18,
                 category: "machine-learning-fundamentals",
-                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80"
               },
               {
                 icon: Code,
@@ -239,7 +239,7 @@ export default function Home() {
                 iconColor: "text-yellow-600 dark:text-yellow-400",
                 courses: 16,
                 category: "python-programming-ai",
-                image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80"
               },
               {
                 icon: BarChart3,
@@ -250,7 +250,7 @@ export default function Home() {
                 iconColor: "text-orange-600 dark:text-orange-400",
                 courses: 14,
                 category: "data-science-ai",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80"
               },
               {
                 icon: Eye,
@@ -261,7 +261,7 @@ export default function Home() {
                 iconColor: "text-teal-600 dark:text-teal-400",
                 courses: 13,
                 category: "computer-vision-basics",
-                image: "https://images.unsplash.com/photo-1593376893114-1aed528d80cf?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
               },
               {
                 icon: MessageSquare,
@@ -272,7 +272,7 @@ export default function Home() {
                 iconColor: "text-indigo-600 dark:text-indigo-400",
                 courses: 11,
                 category: "natural-language-processing",
-                image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
               },
               {
                 icon: Scale,
@@ -283,7 +283,7 @@ export default function Home() {
                 iconColor: "text-rose-600 dark:text-rose-400",
                 courses: 8,
                 category: "ai-ethics-responsible",
-                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
               },
               {
                 icon: Briefcase,
@@ -294,7 +294,7 @@ export default function Home() {
                 iconColor: "text-violet-600 dark:text-violet-400",
                 courses: 10,
                 category: "ai-tools-business",
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
               },
             ].map((category, index) => (
               <Link
