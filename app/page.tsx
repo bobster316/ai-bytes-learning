@@ -304,20 +304,24 @@ export default function Home() {
               >
                 <Card className="relative h-full bg-card border-2 border-border shadow-md hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
                   {/* Image Section */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${category.color}`}>
                     <img
                       src={category.image}
                       alt={category.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
                     />
                     {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-30 group-hover:opacity-40 transition-opacity duration-300`}></div>
 
                     {/* Icon Badge */}
                     <div className="absolute top-4 right-4">
-                      <div className={`w-12 h-12 rounded-xl ${category.bgColor} backdrop-blur-sm flex items-center justify-center shadow-lg`}>
-                        <category.icon className={`w-6 h-6 ${category.iconColor}`} />
+                      <div className={`w-14 h-14 rounded-xl ${category.bgColor} backdrop-blur-sm flex items-center justify-center shadow-lg`}>
+                        <category.icon className={`w-7 h-7 ${category.iconColor}`} />
                       </div>
                     </div>
                   </div>
