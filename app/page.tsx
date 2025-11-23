@@ -205,7 +205,8 @@ export default function Home() {
                 bgColor: "bg-blue-50 dark:bg-blue-950/30",
                 iconColor: "text-blue-600 dark:text-blue-400",
                 courses: 12,
-                category: "foundational-ai-literacy"
+                category: "foundational-ai-literacy",
+                image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
               },
               {
                 icon: Sparkles,
@@ -215,7 +216,8 @@ export default function Home() {
                 bgColor: "bg-purple-50 dark:bg-purple-950/30",
                 iconColor: "text-purple-600 dark:text-purple-400",
                 courses: 15,
-                category: "generative-ai-prompt-engineering"
+                category: "generative-ai-prompt-engineering",
+                image: "https://images.unsplash.com/photo-1706885093476-b1e54f26af73?w=800&q=80"
               },
               {
                 icon: Brain,
@@ -225,7 +227,8 @@ export default function Home() {
                 bgColor: "bg-green-50 dark:bg-green-950/30",
                 iconColor: "text-green-600 dark:text-green-400",
                 courses: 18,
-                category: "machine-learning-fundamentals"
+                category: "machine-learning-fundamentals",
+                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"
               },
               {
                 icon: Code,
@@ -235,7 +238,8 @@ export default function Home() {
                 bgColor: "bg-yellow-50 dark:bg-yellow-950/30",
                 iconColor: "text-yellow-600 dark:text-yellow-400",
                 courses: 16,
-                category: "python-programming-ai"
+                category: "python-programming-ai",
+                image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&q=80"
               },
               {
                 icon: BarChart3,
@@ -245,7 +249,8 @@ export default function Home() {
                 bgColor: "bg-orange-50 dark:bg-orange-950/30",
                 iconColor: "text-orange-600 dark:text-orange-400",
                 courses: 14,
-                category: "data-science-ai"
+                category: "data-science-ai",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
               },
               {
                 icon: Eye,
@@ -255,7 +260,8 @@ export default function Home() {
                 bgColor: "bg-teal-50 dark:bg-teal-950/30",
                 iconColor: "text-teal-600 dark:text-teal-400",
                 courses: 13,
-                category: "computer-vision-basics"
+                category: "computer-vision-basics",
+                image: "https://images.unsplash.com/photo-1593376893114-1aed528d80cf?w=800&q=80"
               },
               {
                 icon: MessageSquare,
@@ -265,7 +271,8 @@ export default function Home() {
                 bgColor: "bg-indigo-50 dark:bg-indigo-950/30",
                 iconColor: "text-indigo-600 dark:text-indigo-400",
                 courses: 11,
-                category: "natural-language-processing"
+                category: "natural-language-processing",
+                image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80"
               },
               {
                 icon: Scale,
@@ -275,7 +282,8 @@ export default function Home() {
                 bgColor: "bg-rose-50 dark:bg-rose-950/30",
                 iconColor: "text-rose-600 dark:text-rose-400",
                 courses: 8,
-                category: "ai-ethics-responsible"
+                category: "ai-ethics-responsible",
+                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80"
               },
               {
                 icon: Briefcase,
@@ -285,7 +293,8 @@ export default function Home() {
                 bgColor: "bg-violet-50 dark:bg-violet-950/30",
                 iconColor: "text-violet-600 dark:text-violet-400",
                 courses: 10,
-                category: "ai-tools-business"
+                category: "ai-tools-business",
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
               },
             ].map((category, index) => (
               <Link
@@ -294,18 +303,30 @@ export default function Home() {
                 className="group block h-full"
               >
                 <Card className="relative h-full bg-card border-2 border-border shadow-md hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
-                  {/* Gradient overlay on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                  {/* Image Section */}
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={category.image}
+                      alt={category.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
+
+                    {/* Icon Badge */}
+                    <div className="absolute top-4 right-4">
+                      <div className={`w-12 h-12 rounded-xl ${category.bgColor} backdrop-blur-sm flex items-center justify-center shadow-lg`}>
+                        <category.icon className={`w-6 h-6 ${category.iconColor}`} />
+                      </div>
+                    </div>
+                  </div>
 
                   {/* Shine effect */}
                   <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-700"></div>
 
                   <CardContent className="p-6 space-y-4 relative">
-                    {/* Icon */}
-                    <div className={`w-14 h-14 rounded-xl ${category.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <category.icon className={`w-7 h-7 ${category.iconColor}`} />
-                    </div>
-
                     {/* Content */}
                     <div className="space-y-2">
                       <h3 className="text-xl font-bold text-foreground group-hover:text-[#00BFA5] transition-colors">
