@@ -49,8 +49,8 @@ export default function Home() {
 
   // Video paths based on theme
   const videoSrc = isDark
-    ? '/videos/AI Bytes Learning Home Page Darker Background.mp4'
-    : '/videos/AI Bytes Learning Home Page White  Background.mp4';
+    ? '/videos/ai-avatar-dark.mp4'
+    : '/videos/ai-avatar-light.mp4';
 
   const fallbackImage = isDark
     ? '/Main Image Dark Mode.png'
@@ -68,6 +68,13 @@ export default function Home() {
       })
       .catch(() => setVideoError(true));
   }, [videoSrc]);
+
+  // Set isPlaying to true when video starts autoplaying
+  useEffect(() => {
+    if (videoRef.current && !videoError) {
+      setIsPlaying(true);
+    }
+  }, [mounted, videoError]);
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -139,7 +146,9 @@ export default function Home() {
                   <>
                     <video
                       ref={videoRef}
+                      autoPlay
                       loop
+                      muted
                       playsInline
                       className="w-full h-full object-contain"
                       onError={() => setVideoError(true)}
