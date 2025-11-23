@@ -1,9 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { useTheme } from "next-themes";
 import { Header } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,8 +14,6 @@ import {
   TrendingUp,
   Users,
   CheckCircle2,
-  Play,
-  Pause,
   Sparkles,
   BarChart3,
   Shield,
@@ -37,55 +32,6 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [videoError, setVideoError] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const { theme, resolvedTheme } = useTheme();
-
-  // Determine current theme (resolvedTheme handles 'system' preference)
-  const currentTheme = resolvedTheme || theme;
-  const isDark = currentTheme === 'dark';
-
-  // Video paths based on theme
-  const videoSrc = isDark
-    ? '/videos/ai-avatar-dark.mp4'
-    : '/videos/ai-avatar-light.mp4';
-
-  const fallbackImage = isDark
-    ? '/Main Image Dark Mode.png'
-    : '/Main Image Light Mode.png';
-
-  useEffect(() => {
-    setMounted(true);
-
-    // Check if video file exists
-    fetch(videoSrc, { method: 'HEAD' })
-      .then(response => {
-        if (!response.ok) {
-          setVideoError(true);
-        }
-      })
-      .catch(() => setVideoError(true));
-  }, [videoSrc]);
-
-  // Set isPlaying to true when video starts autoplaying
-  useEffect(() => {
-    if (videoRef.current && !videoError) {
-      setIsPlaying(true);
-    }
-  }, [mounted, videoError]);
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col items-center">
@@ -139,48 +85,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* AI Tutor Video or Image Fallback */}
+            {/* Hero Visual Placeholder */}
             <div className="relative group">
-              <div className="aspect-video rounded-lg border border-border overflow-hidden shadow-lg relative bg-white dark:bg-gray-900">
-                {mounted && !videoError ? (
-                  <>
-                    <video
-                      ref={videoRef}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-contain"
-                      onError={() => setVideoError(true)}
-                      key={videoSrc}
-                    >
-                      <source src={videoSrc} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-
-                    {/* Custom Play/Pause Button - Bottom Left */}
-                    <button
-                      onClick={togglePlay}
-                      className="absolute bottom-4 left-4 bg-[#00BFA5] hover:bg-[#00A896] text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
-                      aria-label={isPlaying ? "Pause video" : "Play video"}
-                    >
-                      {isPlaying ? (
-                        <Pause className="w-5 h-5" />
-                      ) : (
-                        <Play className="w-5 h-5 ml-0.5" />
-                      )}
-                    </button>
-                  </>
-                ) : (
-                  <Image
-                    src={fallbackImage}
-                    alt="AI Tutor - Learn AI in 60 Minutes"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    className="object-contain"
-                    priority
-                  />
-                )}
+              <div className="aspect-video rounded-lg border-2 border-border overflow-hidden shadow-lg relative bg-gradient-to-br from-[#00BFA5]/10 via-blue-500/10 to-purple-500/10 dark:from-[#00BFA5]/20 dark:via-blue-500/20 dark:to-purple-500/20">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center space-y-4 p-8">
+                    <div className="w-24 h-24 mx-auto bg-gradient-to-br from-[#00BFA5] to-blue-500 rounded-full flex items-center justify-center shadow-2xl">
+                      <Sparkles className="w-12 h-12 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground">
+                      AI-Powered Learning
+                    </h3>
+                    <p className="text-foreground/70 max-w-sm">
+                      Transform your career with cutting-edge AI education
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
