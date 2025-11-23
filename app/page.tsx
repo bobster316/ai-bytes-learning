@@ -206,7 +206,7 @@ export default function Home() {
                 iconColor: "text-blue-600 dark:text-blue-400",
                 courses: 12,
                 category: "foundational-ai-literacy",
-                image: "/categories/foundational-ai.jpg"
+                image: "/categories/Gemini_Generated_Image_70esol70esol70es.png"
               },
               {
                 icon: Sparkles,
@@ -217,7 +217,7 @@ export default function Home() {
                 iconColor: "text-purple-600 dark:text-purple-400",
                 courses: 15,
                 category: "generative-ai-prompt-engineering",
-                image: "/categories/generative-ai.jpg"
+                image: "/categories/Gemini_Generated_Image_7z1i1m7z1i1m7z1i.png"
               },
               {
                 icon: Brain,
@@ -228,7 +228,7 @@ export default function Home() {
                 iconColor: "text-green-600 dark:text-green-400",
                 courses: 18,
                 category: "machine-learning-fundamentals",
-                image: "/categories/machine-learning.jpg"
+                image: "/categories/Gemini_Generated_Image_9gmuap9gmuap9gmu.png"
               },
               {
                 icon: Code,
@@ -239,7 +239,7 @@ export default function Home() {
                 iconColor: "text-yellow-600 dark:text-yellow-400",
                 courses: 16,
                 category: "python-programming-ai",
-                image: "/categories/python-programming.jpg"
+                image: "/categories/Gemini_Generated_Image_e64qfte64qfte64q.png"
               },
               {
                 icon: BarChart3,
@@ -250,7 +250,7 @@ export default function Home() {
                 iconColor: "text-orange-600 dark:text-orange-400",
                 courses: 14,
                 category: "data-science-ai",
-                image: "/categories/data-science.jpg"
+                image: "/categories/Gemini_Generated_Image_g75l16g75l16g75l.png"
               },
               {
                 icon: Eye,
@@ -261,7 +261,7 @@ export default function Home() {
                 iconColor: "text-teal-600 dark:text-teal-400",
                 courses: 13,
                 category: "computer-vision-basics",
-                image: "/categories/computer-vision.jpg"
+                image: "/categories/Gemini_Generated_Image_gch3gfgch3gfgch3.png"
               },
               {
                 icon: MessageSquare,
@@ -272,7 +272,7 @@ export default function Home() {
                 iconColor: "text-indigo-600 dark:text-indigo-400",
                 courses: 11,
                 category: "natural-language-processing",
-                image: "/categories/nlp.jpg"
+                image: "/categories/Gemini_Generated_Image_vlh1vovlh1vovlh1.png"
               },
               {
                 icon: Scale,
@@ -283,7 +283,7 @@ export default function Home() {
                 iconColor: "text-rose-600 dark:text-rose-400",
                 courses: 8,
                 category: "ai-ethics-responsible",
-                image: "/categories/ai-ethics.jpg"
+                image: "/categories/Gemini_Generated_Image_z47mmcz47mmcz47m.png"
               },
               {
                 icon: Briefcase,
@@ -294,7 +294,7 @@ export default function Home() {
                 iconColor: "text-violet-600 dark:text-violet-400",
                 courses: 10,
                 category: "ai-tools-business",
-                image: "/categories/business-apps.jpg"
+                image: "/categories/Gemini_Generated_Image_70esol70esol70es.png"
               },
             ].map((category, index) => (
               <Link
