@@ -401,6 +401,7 @@ export default function Home() {
                 color: "from-blue-500 to-cyan-500",
                 bgColor: "bg-blue-50",
                 iconColor: "text-blue-600",
+                image: "/ai_mastery/phase_1.png"
               },
               {
                 phase: "02",
@@ -410,6 +411,7 @@ export default function Home() {
                 color: "from-[#00BFA5] to-emerald-500",
                 bgColor: "bg-emerald-50",
                 iconColor: "text-[#00BFA5]",
+                image: "/ai_mastery/phase_2.png"
               },
               {
                 phase: "03",
@@ -419,6 +421,7 @@ export default function Home() {
                 color: "from-purple-500 to-pink-500",
                 bgColor: "bg-purple-50",
                 iconColor: "text-purple-600",
+                image: "/ai_mastery/phase_3.png"
               },
             ].map((item, index) => (
               <div key={index} className="group relative">
@@ -429,13 +432,23 @@ export default function Home() {
                   </div>
                 )}
 
-                <Card className="relative h-full bg-card border-2 border-border shadow-lg hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2">
-                  <CardContent className="p-8 space-y-6">
-                    {/* Phase number with gradient */}
-                    <div className={`inline-block px-4 py-2 rounded-lg bg-gradient-to-r ${item.color} text-white font-bold text-sm`}>
-                      PHASE {item.phase}
+                <Card className="relative h-full bg-card border-2 border-border shadow-lg hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
+                  {/* Image Header */}
+                  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Phase number badge */}
+                    <div className="absolute top-4 left-4">
+                      <div className={`inline-block px-4 py-2 rounded-lg bg-gradient-to-r ${item.color} text-white font-bold text-sm shadow-lg`}>
+                        PHASE {item.phase}
+                      </div>
                     </div>
+                  </div>
 
+                  <CardContent className="p-8 space-y-6">
                     {/* Icon */}
                     <div className={`w-16 h-16 rounded-2xl ${item.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <item.icon className={`w-8 h-8 ${item.iconColor}`} />
@@ -459,36 +472,49 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Stats Section - Enhanced */}
-          <div className="bg-card rounded-3xl shadow-xl border border-border p-8 lg:p-12 max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h3 className="text-2xl font-bold text-foreground mb-2">
-                Trusted by Thousands Worldwide
-              </h3>
-              <p className="text-foreground/80">
-                Join a growing community of AI enthusiasts and professionals
-              </p>
+          {/* Stats Section - Enhanced with Image */}
+          <div className="bg-card rounded-3xl shadow-xl border border-border overflow-hidden max-w-5xl mx-auto">
+            {/* Image Header */}
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src="/ai_mastery/trusted.png"
+                alt="Trusted by Thousands Worldwide"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { value: "500+", label: "Completed", icon: CheckCircle2, color: "bg-green-500" },
-                { value: "150+", label: "Courses", icon: BookOpen, color: "bg-blue-500" },
-                { value: "5000+", label: "Students", icon: Users, color: "bg-[#00BFA5]" },
-                { value: "99.5%", label: "Uptime", icon: TrendingUp, color: "bg-purple-500" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className={`w-16 h-16 ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                    <stat.icon className="w-8 h-8 text-white" />
+            {/* Content */}
+            <div className="p-8 lg:p-12 -mt-16 relative z-10">
+              <div className="text-center mb-10">
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  Trusted by Thousands Worldwide
+                </h3>
+                <p className="text-foreground/80">
+                  Join a growing community of AI enthusiasts and professionals
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {[
+                  { value: "500+", label: "Completed", icon: CheckCircle2, color: "bg-green-500" },
+                  { value: "150+", label: "Courses", icon: BookOpen, color: "bg-blue-500" },
+                  { value: "5000+", label: "Students", icon: Users, color: "bg-[#00BFA5]" },
+                  { value: "99.5%", label: "Uptime", icon: TrendingUp, color: "bg-purple-500" },
+                ].map((stat, index) => (
+                  <div key={index} className="text-center group">
+                    <div className={`w-16 h-16 ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+                      <stat.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <p className="text-3xl lg:text-4xl font-bold text-foreground mb-1">
+                      {stat.value}
+                    </p>
+                    <p className="text-sm text-foreground/80 font-medium uppercase tracking-wider">
+                      {stat.label}
+                    </p>
                   </div>
-                  <p className="text-3xl lg:text-4xl font-bold text-foreground mb-1">
-                    {stat.value}
-                  </p>
-                  <p className="text-sm text-foreground/80 font-medium uppercase tracking-wider">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
