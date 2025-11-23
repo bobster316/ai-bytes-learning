@@ -205,7 +205,8 @@ export default function Home() {
                 bgColor: "bg-blue-50 dark:bg-blue-950/30",
                 iconColor: "text-blue-600 dark:text-blue-400",
                 courses: 12,
-                category: "foundational-ai-literacy"
+                category: "foundational-ai-literacy",
+                image: "/categories/foundational-ai.jpg"
               },
               {
                 icon: Sparkles,
@@ -215,7 +216,8 @@ export default function Home() {
                 bgColor: "bg-purple-50 dark:bg-purple-950/30",
                 iconColor: "text-purple-600 dark:text-purple-400",
                 courses: 15,
-                category: "generative-ai-prompt-engineering"
+                category: "generative-ai-prompt-engineering",
+                image: "/categories/generative-ai.jpg"
               },
               {
                 icon: Brain,
@@ -225,7 +227,8 @@ export default function Home() {
                 bgColor: "bg-green-50 dark:bg-green-950/30",
                 iconColor: "text-green-600 dark:text-green-400",
                 courses: 18,
-                category: "machine-learning-fundamentals"
+                category: "machine-learning-fundamentals",
+                image: "/categories/machine-learning.jpg"
               },
               {
                 icon: Code,
@@ -235,7 +238,8 @@ export default function Home() {
                 bgColor: "bg-yellow-50 dark:bg-yellow-950/30",
                 iconColor: "text-yellow-600 dark:text-yellow-400",
                 courses: 16,
-                category: "python-programming-ai"
+                category: "python-programming-ai",
+                image: "/categories/python-programming.jpg"
               },
               {
                 icon: BarChart3,
@@ -245,7 +249,8 @@ export default function Home() {
                 bgColor: "bg-orange-50 dark:bg-orange-950/30",
                 iconColor: "text-orange-600 dark:text-orange-400",
                 courses: 14,
-                category: "data-science-ai"
+                category: "data-science-ai",
+                image: "/categories/data-science.jpg"
               },
               {
                 icon: Eye,
@@ -255,7 +260,8 @@ export default function Home() {
                 bgColor: "bg-teal-50 dark:bg-teal-950/30",
                 iconColor: "text-teal-600 dark:text-teal-400",
                 courses: 13,
-                category: "computer-vision-basics"
+                category: "computer-vision-basics",
+                image: "/categories/computer-vision.jpg"
               },
               {
                 icon: MessageSquare,
@@ -265,7 +271,8 @@ export default function Home() {
                 bgColor: "bg-indigo-50 dark:bg-indigo-950/30",
                 iconColor: "text-indigo-600 dark:text-indigo-400",
                 courses: 11,
-                category: "natural-language-processing"
+                category: "natural-language-processing",
+                image: "/categories/nlp.jpg"
               },
               {
                 icon: Scale,
@@ -275,7 +282,8 @@ export default function Home() {
                 bgColor: "bg-rose-50 dark:bg-rose-950/30",
                 iconColor: "text-rose-600 dark:text-rose-400",
                 courses: 8,
-                category: "ai-ethics-responsible"
+                category: "ai-ethics-responsible",
+                image: "/categories/ai-ethics.jpg"
               },
               {
                 icon: Briefcase,
@@ -285,7 +293,8 @@ export default function Home() {
                 bgColor: "bg-violet-50 dark:bg-violet-950/30",
                 iconColor: "text-violet-600 dark:text-violet-400",
                 courses: 10,
-                category: "ai-tools-business"
+                category: "ai-tools-business",
+                image: "/categories/business-apps.jpg"
               },
             ].map((category, index) => (
               <Link
@@ -294,15 +303,25 @@ export default function Home() {
                 className="group block h-full"
               >
                 <Card className="relative h-full bg-card border-2 border-border shadow-md hover:shadow-2xl hover:border-[#00BFA5]/50 transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
-                  {/* Gradient Header with Icon */}
-                  <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${category.color} flex items-center justify-center`}>
-                    {/* Decorative circles */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-                    <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                  {/* Image Header */}
+                  <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${category.color}`}>
+                    <img
+                      src={category.image}
+                      alt={category.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
+                    {/* Gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
 
-                    {/* Large centered icon */}
-                    <div className="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                      <category.icon className="w-20 h-20 text-white drop-shadow-lg" />
+                    {/* Icon badge */}
+                    <div className="absolute top-4 right-4">
+                      <div className={`w-14 h-14 rounded-xl ${category.bgColor} backdrop-blur-sm flex items-center justify-center shadow-lg`}>
+                        <category.icon className={`w-7 h-7 ${category.iconColor}`} />
+                      </div>
                     </div>
                   </div>
 
