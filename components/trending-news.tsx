@@ -130,8 +130,8 @@ export function TrendingNews() {
 
   if (loading) {
     return (
-      <section className="py-20 lg:py-32 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-20 lg:py-32 bg-background w-full">
+        <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
               Trending in <span className="text-[#00BFA5]">AI</span>
@@ -158,8 +158,8 @@ export function TrendingNews() {
   console.log("[TrendingNews] Rendering with", articles.length, "total articles, showing first 4");
 
   return (
-    <section id="trending" className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="trending" className="py-20 lg:py-32 bg-background w-full">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16 space-y-4">
           <Badge variant="secondary" className="mb-2">
             <Newspaper className="w-4 h-4 mr-1" />

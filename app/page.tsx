@@ -81,12 +81,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col items-center">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background border-b border-border">
-        <div className="container mx-auto px-4 py-12 lg:py-16">
+      <section className="relative overflow-hidden bg-background border-b border-border w-full">
+        <div className="container mx-auto px-4 py-12 lg:py-16 max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-sm text-foreground-subtle uppercase tracking-wider">AI BYTES LEARNING</p>
@@ -178,8 +178,8 @@ export default function Home() {
         </div>
       </section>
       {/* Top Categories Section */}
-      <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="py-20 lg:py-32 bg-background relative overflow-hidden w-full">
+        <div className="container mx-auto px-4 max-w-7xl">
           {/* Section Header */}
           <div className="text-center mb-16 space-y-4">
             <Badge variant="secondary" className="mb-2">
@@ -344,14 +344,14 @@ export default function Home() {
         </div>
       </section>
       {/* Three-Phase Approach */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-card to-background relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-card to-background relative overflow-hidden w-full">
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-[#00BFA5] rounded-full blur-3xl opacity-20"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00BFA5]/10 rounded-full">
               <Zap className="w-4 h-4 text-[#00BFA5]" />
@@ -471,14 +471,14 @@ export default function Home() {
         </div>
       </section>
       {/* Built for Performance Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-card relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-card relative overflow-hidden w-full">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-40 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#00BFA5] rounded-full blur-3xl opacity-10"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
           {/* Section Header */}
           <div className="text-center mb-16 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00BFA5]/10 to-blue-500/10 rounded-full border border-[#00BFA5]/20">
@@ -611,8 +611,8 @@ export default function Home() {
       <NewsletterSignup />
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-20 bg-background-inverse">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 lg:py-20 bg-background-inverse w-full">
+        <div className="container mx-auto px-4 text-center max-w-7xl">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground-inverse">
               Ready to accelerate your learning?

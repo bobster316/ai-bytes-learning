@@ -29,8 +29,8 @@ export function NewsletterSignup() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-[#00BFA5]/10 to-[#00A896]/10 border-y border-border">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-gradient-to-br from-[#00BFA5]/10 to-[#00A896]/10 border-y border-border w-full">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center">
           <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#00BFA5]/20">
             <Mail className="w-8 h-8 text-[#00BFA5]" />

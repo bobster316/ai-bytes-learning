@@ -23,7 +23,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
-      <div className="container mx-auto flex h-28 items-center justify-between px-4">
+      <div className="container mx-auto flex h-28 items-center justify-between px-4 max-w-7xl">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           {theme === "dark" ? (
@@ -128,7 +128,7 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="border-t border-border bg-background md:hidden">
-          <nav className="container mx-auto flex flex-col space-y-4 px-4 py-6">
+          <nav className="container mx-auto flex flex-col space-y-4 px-4 py-6 max-w-7xl">
             <Link
               href="/"
               className="text-sm font-medium text-foreground-subtle transition-colors hover:text-foreground"
