@@ -7,7 +7,7 @@ const protectedRoutes = ["/dashboard"]; // Removed /admin to allow access withou
 // Auth routes that should redirect to dashboard if already logged in
 const authRoutes = ["/auth/signin", "/auth/signup"];
 
-export function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check authentication status from Supabase
