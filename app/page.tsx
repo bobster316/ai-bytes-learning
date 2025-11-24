@@ -418,7 +418,7 @@ export default function Home() {
             {/* Image Header */}
             <div className="relative h-64 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&h=600&fit=crop"
+                src="/mastery/Phase 1.png"
                 alt="Trusted by Thousands Worldwide"
                 fill
                 className="object-cover"
